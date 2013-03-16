@@ -49,20 +49,9 @@ import processing.core.PApplet;
 
 
 /**
- * Demo how to generate a graph with generators. <p> The code shows how to use
- * <code>RandomGraph</code> and
- * <code>WattsStrogatz</code> generators and push result into the graph
- * structure using
- * <code>ImportController</code>. <p> In Gephi import and generate are not
- * directly appened to the main graph structure for consistency reasons. New
- * data are pushed in a
- * <code>Container</code> and then appened to the graph structure with the help
- * of a
- * <code>Processor</code>. <p> In this demo, two workspaces are created.
- * Manipulate workspaces from
- * <code>ProjectController</code>
- *
- * @author Mathieu Bastian
+ * An implementation of the graph API available in the Gephi Toolkit
+ * 
+ * @author Vincent Giannone
  */
 public class Gephi_Plugin {
     
@@ -95,7 +84,7 @@ public class Gephi_Plugin {
         	
             container = importController.importFile(file);
             container.getLoader().setEdgeDefault(EdgeDefault.DIRECTED);   //Force DIRECTED
-            container.setAllowAutoNode(false);  //Don’t create missing nodes
+            container.setAllowAutoNode(false);  //Donï¿½t create missing nodes
         } catch (Exception ex) {
             ex.printStackTrace();
             return;
